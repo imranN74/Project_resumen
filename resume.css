@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "head1 head1 head1 head1 head1 head1"
+        "head2 head2 head2 head2 head2 head2"
+        "left left right right right right"
+        "left left right right right right"
+        "left left right right right right"
+        "left left right right right right"
+        "left left right right right right"
+    ;
+    row-gap: 2vh;
+
+}
+
+.head1 {
+    grid-area: head1;
+    background-color: #922B21;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.head1 .name-deg {
+    font-size: 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.head2 {
+    grid-area: head2;
+}
+
+.left {
+    grid-area: left;
+    display: grid;
+    grid-template-rows: repeat(8 1fr);
+    grid-template-columns: repeat(8 1fr);
+    row-gap: 2vh;
+}
+
+.contacts {
+    grid-column: 2;
+    grid-row: 1;
+    display: inline-block;
+}
+
+.skills {
+    grid-column: 2;
+    grid-row: 2;
+    display: inline-block;
+}
+
+.skills .skills-li {
+    position: relative;
+    top: 2vh;
+}
+
+.edu {
+    grid-column: 2;
+    grid-row: 3;
+    display: inline-block;
+}
+
+.right {
+    grid-area: right;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+}
+
+.exp {
+    grid-column-start: 2;
+}
+
+
+.title {
+    color: #922B21;
+    text-decoration: underline;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+@media print {
+    .head1 .name-deg {
+        display: block;
+        font-size: 1.5em;
+        padding: 1em;
+    }
+
+    .skills {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media (max-width:790px) {
+    .name-deg {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.objective {
+    text-align: center;
+}
+
+.hr {
+    width: 30vw;
+    margin: auto;
+}
